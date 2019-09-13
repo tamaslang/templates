@@ -36,4 +36,24 @@ This last step ensures that when dependencies are changed in `build.gradle.kts`,
 ```bash
 ./gradlew run
 ```
+
+## Build extensions
+
+### Spring Dependency
+
+Allows grouped versions of dependencies to be defined, so that dependencies do not have to redefine/repeat version 
+numbers.
+
+[Spring Dependency Plugin documentation](https://docs.spring.io/dependency-management-plugin/docs/current/reference/html/)
+
+
+### Detekt
+
+Runs static code analysis (and formatting) to provide basic code quality assurance.
+
+```bash
+./gradlew detekt
+```
+
+[Detekt Plugin documentation](https://arturbosch.github.io/detekt/kotlindsl.html) 
  

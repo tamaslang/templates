@@ -1,10 +1,12 @@
 import com.adarshr.gradle.testlogger.theme.ThemeType
+import io.gitlab.arturbosch.detekt.detekt
 
 plugins {
     application
     kotlin("jvm") version "1.3.21"
     id("io.spring.dependency-management") version "1.0.6.RELEASE"
     id ("com.adarshr.test-logger") version "1.6.0"
+    id ("io.gitlab.arturbosch.detekt") version "1.0.0-RC16"
 }
 
 application {
@@ -13,6 +15,7 @@ application {
 
 val assertjVersion = "3.11.1"
 val junitVersion = "5.3.2"
+val detektVersion = "1.0.1"
 
 dependencyManagement {
     dependencies {
@@ -37,6 +40,7 @@ dependencies {
 repositories {
     jcenter()
 }
+
 tasks {
     test {
         useJUnitPlatform()
@@ -57,3 +61,11 @@ tasks {
         showFailedStandardStreams = true
     }
 }
+
+
+detekt {
+    toolVersion = detektVersion
+    input = files("src/main/kotlin")
+    config = files("detekt-config.yml")
+}
+
