@@ -3,10 +3,10 @@ import io.gitlab.arturbosch.detekt.detekt
 
 plugins {
     application
-    kotlin("jvm") version "1.3.21"
-    id("io.spring.dependency-management") version "1.0.6.RELEASE"
-    id ("com.adarshr.test-logger") version "1.6.0"
-    id ("io.gitlab.arturbosch.detekt") version "1.0.0-RC16"
+    kotlin("jvm") version "1.3.50"
+    id("io.spring.dependency-management") version "1.0.8.RELEASE"
+    id ("com.adarshr.test-logger") version "1.7.0"
+    id ("io.gitlab.arturbosch.detekt") version "1.0.1"
 }
 
 application {
