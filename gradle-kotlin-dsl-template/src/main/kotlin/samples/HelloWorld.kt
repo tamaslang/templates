@@ -1,6 +1,6 @@
 package samples
 
-fun main(args: Array<String>) {
+fun main() {
     println(sayHello("World"))
 }
 
