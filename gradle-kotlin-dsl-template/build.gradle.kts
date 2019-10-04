@@ -16,6 +16,7 @@ application {
 val assertjVersion = "3.11.1"
 val junitVersion = "5.3.2"
 val detektVersion = "1.0.1"
+val junitVintageVersion = "4.12"
 
 dependencyManagement {
     dependencies {
@@ -30,11 +31,15 @@ dependencyManagement {
 dependencies {
     compile(kotlin("stdlib"))
 
+    testCompileOnly("junit:junit:$junitVintageVersion")
+
+
     testImplementation("org.junit.jupiter:junit-jupiter-api")
     testImplementation("org.junit.jupiter:junit-jupiter-params")
 
     testImplementation("org.assertj:assertj-core:$assertjVersion")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine")
+    testRuntimeOnly("org.junit.vintage:junit-vintage-engine:$junitVersion")
 }
 
 repositories {
