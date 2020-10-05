@@ -64,10 +64,6 @@ complexity:
   LongMethod:
     active: true
     threshold: 20
-  LongParameterList:
-    active: true
-    threshold: 6
-    ignoreDefaultParameters: false
   MethodOverloading:
     active: false
     threshold: 6
@@ -109,7 +105,6 @@ empty-blocks:
     active: true
   EmptyFunctionBlock:
     active: true
-    ignoreOverriddenFunctions: false
   EmptyIfBlock:
     active: true
   EmptyInitBlock:
@@ -295,12 +290,10 @@ naming:
     active: true
     parameterPattern: '[a-z][A-Za-z0-9]*'
     excludeClassPattern: '$^'
-    ignoreOverriddenFunctions: true
   MatchingDeclarationName:
     active: true
   MemberNameEqualsClassName:
     active: false
-    ignoreOverriddenFunction: true
   ObjectPropertyNaming:
     active: true
     constantPattern: '[A-Za-z][_A-Za-z0-9]*'
